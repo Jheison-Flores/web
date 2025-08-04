@@ -1,0 +1,240 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #FAF6E9;
+    color: #333;
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+    color: #d72660;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-align: center; /* centra el encabezado */
+}
+
+nav a {
+    text-decoration: none;
+    color: #d72660;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #a61e4d;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 50px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(255,182,213,0.10);
+    padding: 32px 28px;
+}
+
+h2 {
+    color: #d72660;
+    font-size: 2rem;
+    border-bottom: 2px solid #ffb6d5;
+    display: inline-block;
+    padding-bottom: 6px;
+    margin: 0 0 18px;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.productos article {
+    background: #ffe0ef;
+    border-radius: 14px;
+    box-shadow: 0 1px 6px rgba(215,38,96,0.07);
+    padding: 18px 16px;
+    width: 240px;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.productos article:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(215,38,96,0.13);
+}
+
+.productos img {
+    max-width: 180px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(255,182,213,0.13);
+}
+
+.productos h3 {
+    color: #a61e4d;
+    margin: 10px 0 6px;
+    font-size: 1.2rem;
+}
+.productos p {
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+}
+
+.productos button {
+    background: #d72660;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.productos button:hover {
+    background: #a61e4d;
+}
+
+footer {
+    background: #ffe0ef;
+    color: #a61e4d;
+    text-align: center;
+    padding: 30px 0 10px;
+    margin-top: 40px;
+    border-top: 2px solid #ffb6d5;
+}
+footer h2 {
+    color: #d72660;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+footer p {
+    margin: 6px 0;
+    font-size: 1rem;
+}
+
+.main-header {
+    background: #C3EAE3;
+    box-shadow: 0 2px 8px rgba(255,182,213,0.15);
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra el conjunto */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 30px 10px;
+    flex-wrap: wrap;
+}
+
+.logo-link {
+    margin-right: 30px; /* empuja el logo un poco a la izquierda */
+}
+
+
+@media (min-width: 901px) {
+    .header-content {
+        justify-content: flex-start; /* alinea a la izquierda */
+    }
+    header h1, nav {
+        margin-left: auto; /* empuja el título y menú al centro */
+        margin-right: auto;
+    }
+}
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+.logo-img {
+    height: 160px;
+    justify-content: left;
+}
+
+nav {
+    display: flex;
+    justify-content: left;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+.nav-list li a {
+    color: #E53888;
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s, background 0.2s;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+.nav-list li a:hover {
+    background: #ffe0ef;
+    color: #a61e4d;
+}
+
+@media (max-width: 900px) {
+    .header-content {
+        align-items: flex-start;
+    }
+    .nav-list {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+}
+#customCarouselTrack {
+    display: flex;
+}
+
+/* Estilos para el botón flotante de WhatsApp */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}

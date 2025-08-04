@@ -1,0 +1,83 @@
+.catalogo-productos {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 32px;
+        justify-items: center;
+        margin: 40px auto 0 auto;
+        max-width: 1200px;
+        padding: 0 16px;
+      }
+.producto-card {
+        background: #ffe0ef;
+        border-radius: 14px;
+        box-shadow: 0 1px 8px rgba(215,38,96,0.10);
+        padding: 22px 18px;
+        width: 100%;
+        min-width: 180px;
+        max-width: 220px;
+        min-height: 370px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+        margin-bottom: 20px;
+      }
+.producto-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 4px 16px rgba(215,38,96,0.13);
+      }
+.producto-card img {
+        width: 100%;
+        max-width: 170px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 14px;
+        box-shadow: 0 2px 8px rgba(255,182,213,0.13);
+        background: #fff;
+      }
+.producto-card h3 {
+        color: #a61e4d;
+        margin: 10px 0 6px 0;
+        font-size: 1.2rem;
+      }
+.producto-card p {
+        color: #333;
+        font-size: 1.05rem;
+        margin: 0 0 8px 0;
+      }
+.ver-mas-btn {
+        display: block;
+        margin: 32px auto 0 auto;
+        background: #d72660;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 32px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+.ver-mas-btn:hover {
+    background: #a61e4d;
+     }
+    @media (max-width: 1200px) {
+        .catalogo-productos {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    @media (max-width: 800px) {
+        .catalogo-productos {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 18px;
+        }
+        .producto-card {
+          max-width: 95vw;
+        }
+      }
+    @media (max-width: 500px) {
+        .catalogo-productos {
+          grid-template-columns: 1fr;
+        }
+      }

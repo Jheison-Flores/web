@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Producto</title>
+  <style>
+    body {
+      background: #fff0f6;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .edit-container {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,182,213,0.13);
+      padding: 38px 32px 28px 32px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    h2 {
+      color: #d72660;
+      margin-bottom: 24px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    input, textarea {
+      padding: 10px 12px;
+      border: 1px solid #ffb6d5;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #ffe0ef;
+      outline: none;
+      transition: border 0.2s;
+    }
+    input:focus, textarea:focus {
+      border: 1.5px solid #d72660;
+    }
+    button {
+      background: #d72660;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    button:hover {
+      background: #a61e4d;
+    }
+    a {
+      display: inline-block;
+      margin-top: 18px;
+      color: #d72660;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #a61e4d;
+    }
+  </style>
+</head>
+<body>
+  <div class="edit-container">
+    <h2>Editar Producto</h2>
+    <form action="/admin/editar/<%= producto.id %>" method="POST">
+      <input name="nombre" value="<%= producto.nombre %>" placeholder="Nombre" required>
+      <textarea name="descripcion" placeholder="Descripción" required><%= producto.descripcion %></textarea>
+      <input name="precio" type="number" min="0" step="0.01" value="<%= producto.precio %>" placeholder="Precio" required>
+      <input name="talla" value="<%= producto.talla %>" placeholder="Talla" required>
+      <button type="submit">Actualizar</button>
+    </form>
+    <a href="/admin">Volver al panel</a>
+  </div>
+</body>
+</html>
